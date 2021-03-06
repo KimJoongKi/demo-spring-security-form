@@ -14,7 +14,7 @@ public class SimpleController {
         if (principal == null) {
             model.addAttribute("message", "Hello Spring Security");
         } else {
-            model.addAttribute("message", "Hello Spring Security" + principal.getName());
+            model.addAttribute("message", "Hello," + principal.getName());
         }
 
         return "index";
@@ -28,7 +28,7 @@ public class SimpleController {
 
     @GetMapping("/dashboard")
     public String dashboard(Model model, Principal principal) {
-        model.addAttribute("message", "Hello Spring Security" + principal.getName());
+        model.addAttribute("message", "Hello," + principal.getName());
         return "dashboard";
     }
 
