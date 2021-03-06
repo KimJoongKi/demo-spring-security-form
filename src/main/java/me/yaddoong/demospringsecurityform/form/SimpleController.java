@@ -34,7 +34,7 @@ public class SimpleController {
 
     @GetMapping("/admin")
     public String admin(Model model, Principal principal) {
-        model.addAttribute("message", "Hello Spring Security" + principal.getName());
+        model.addAttribute("message", "Hello Admin," + principal.getName());
         return "admin";
     }
 
