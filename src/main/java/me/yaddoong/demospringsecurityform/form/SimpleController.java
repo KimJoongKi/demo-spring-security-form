@@ -49,4 +49,10 @@ public class SimpleController {
         return "admin";
     }
 
+    @GetMapping("/user")
+    public String user(Model model, Principal principal) {
+        model.addAttribute("message", "Hello User," + principal.getName());
+        return "user";
+    }
+
 }
